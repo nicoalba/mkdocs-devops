@@ -62,13 +62,13 @@ Go to [http://localhost:8000](http://localhost:8000).
 
 2. Update the image field in the `mkdocs-deployment.yaml` to use the image from Docker Hub.
 
-3. After updating the `mkdocs-deployment.yaml`, apply the changes with:
+3. After updating the `mkdocs-deployment.yaml`, apply the changes:
 
     ```bash
     kubectl apply -f mkdocs-deployment.yaml
     ```
 
-4. Access the site:
+4. Access the site.
     
     If using port-forwarding:
 
@@ -83,21 +83,11 @@ Go to [http://localhost:8000](http://localhost:8000).
 
 ### Stop/resume steps
 
-| Situation                          | Command                                                 | When to use                                                             |
-| ---------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| First-time deploy                  | kubectl apply -f mkdocs-deployment.yaml                 | When you're initially creating the deployment                           |
-| Stopping the deployment gracefully | kubectl scale deployment mkdocs-deployment --replicas=0 | To stop the app without deleting the deployment                         |
-| Restarting after scaling to zero   | kubectl scale deployment mkdocs-deployment --replicas=1 | When you've previously applied the YAML and just want to start it again |
-
-
-### Port forwarding
-
-1. Run the following command to forward the service port to your local machine:
-
-    `kubectl port-forward service/mkdocs-service 8000:80`
-
-2. Once the port forwarding is set up, open your browser and go to: [http://localhost:8000](http://localhost:8000)
-
+| Situation                          | Command                                                   | When to use                                                                                                    |
+| ---------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| First-time deploy                  | `kubectl apply -f mkdocs-deployment.yaml`                 | When you're initially creating the deployment.                                                                 |
+| Stopping the deployment gracefully | `kubectl scale deployment mkdocs-deployment --replicas=0` | To stop the app without deleting the deployment.                                                               |
+| Restarting after scaling to zero   | `kubectl scale deployment mkdocs-deployment --replicas=1` | When you've previously applied the YAML and just want to start it again. Port forwarding has to be done again. |
 
 ## 📌 Notes
 
