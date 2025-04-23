@@ -60,7 +60,7 @@ Go to [http://localhost:8000](http://localhost:8000).
     docker push yourdockerhubusername/mkdocs-devops
     ```
 
-2. Update the image field in the `mkdocs-deployment.yaml` to use the image from Docker Hub:
+2. Update the image field in the `mkdocs-deployment.yaml` to use the image from Docker Hub.
 
 3. After updating the `mkdocs-deployment.yaml`, apply the changes with:
 
