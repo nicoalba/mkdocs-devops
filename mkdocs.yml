@@ -1,5 +1,5 @@
-site_name: Nico's sample docsite
-site_url: https://nicoalba.github.io/sample-docsite/
+site_name: Nico's sample MkDocs site—DevOps
+site_url: https://nicoalba.github.io/mkdocs-devops/
 theme: 
   name: material
   palette: 
@@ -25,8 +25,8 @@ markdown_extensions:
       custom_checkbox: true
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Overview: index.md
