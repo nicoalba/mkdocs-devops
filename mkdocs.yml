@@ -1,0 +1,41 @@
+site_name: Nico's sample docsite
+site_url: https://nicoalba.github.io/sample-docsite/
+theme: 
+  name: material
+  palette: 
+    - scheme: slate
+      primary: orange
+      accent: orange
+  features:
+    - navigation.path
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Overview: index.md
+  - Get started: get-started.md
+  - Tutorials:
+    - Tutorial 1: tutorial-1.md
+  - Concepts:
+    - Concepts 1: concept-1.md
+  - Reference:
+    - Example code: example-code.md
+    - Definitions: definitions.md
+    - Data tables: data-tables.md
