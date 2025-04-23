@@ -1,4 +1,4 @@
-# MkDocs DevOps demo site
+# MkDocs sample docsite with DevOps (Docker/K8s)
 
 My sample MkDocs site containerized with Docker and served via K8s.
 
