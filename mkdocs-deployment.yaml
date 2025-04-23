@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mkdocs-container
-        image: mkdocs-devops  # use your image name (Docker must be aware of it locally)
+        image: nicoalba/mkdocs-devops
         ports:
         - containerPort: 8000
 ---
