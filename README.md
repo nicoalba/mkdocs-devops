@@ -19,8 +19,8 @@ This project demonstrates how to build, containerize, and deploy a static docume
 
 - Static documentation site powered by Markdown  
 - Dockerized/containerized for isolated and reproducible builds  
-- Kubernetes deployment via manifest (mkdocs-deployment.yaml)  
-- (Optional) LoadBalancer service configuration (service.yaml) 
+- Kubernetes deployment via manifest (`mkdocs-deployment.yaml`)  
+- (Optional) LoadBalancer service configuration (`service.yaml`) 
 
 ---
 
@@ -45,7 +45,7 @@ docker build -t mkdocs-devops .
 docker run -p 8000:8000 mkdocs-devops
 ```
 
-Visit [http://localhost:8000](http://localhost:8000)
+Go to [http://localhost:8000](http://localhost:8000).
 
 ---
 
@@ -53,22 +53,22 @@ Visit [http://localhost:8000](http://localhost:8000)
 
 ### First-time deployment
 
-1. **Push your Docker image to Docker Hub:**
+1. Push your Docker image to Docker Hub:
 
     ```bash
     docker tag mkdocs-devops yourdockerhubusername/mkdocs-devops
     docker push yourdockerhubusername/mkdocs-devops
     ```
 
-2. **Update `mkdocs-deployment.yaml` to use the image from Docker Hub.**
+2. Update `mkdocs-deployment.yaml` to use the image from Docker Hub. To do this, update the image field under the containers line.
 
-3. **Deploy:**
+3. After updating the `mkdocs-deployment.yaml`, apply the changes with:
 
     ```bash
     kubectl apply -f mkdocs-deployment.yaml
     ```
 
-4. **Access the site:**
+4. Access the site:
     
     If using port-forwarding:
 
@@ -76,7 +76,9 @@ Visit [http://localhost:8000](http://localhost:8000)
     kubectl port-forward deployment/mkdocs-deployment 8000:8000
     ```
 
-    Then open 
+    This will forward port 8000 on your local machine to port 8000 in your container, making the site accessible locally.
+
+    Then open your web browser and go to [http://localhost:8000](http://localhost:8000).
 ---
 
 ### Stop/resume steps
