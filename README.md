@@ -1,2 +1,3 @@
 # sample-docsite
-Sample static docsite generated with MkDocs.
+
+My sample MkDocs site containerized with Docker and served via K8s
