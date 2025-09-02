@@ -49,7 +49,7 @@ Go to [http://localhost:8000](http://localhost:8000).
 
 ---
 
-## ☸Run with Kubernetes
+## Run with Kubernetes
 
 ### First-time deployment
 
