@@ -6,7 +6,7 @@ This project demonstrates how to build, containerize, and deploy a static docume
 
 ---
 
-## 🛠 Tech stack
+## Tech stack
 
 - MkDocs  
 - Material for MkDocs  
@@ -24,7 +24,7 @@ This project demonstrates how to build, containerize, and deploy a static docume
 
 ---
 
-## 📁 Project structure
+## Project structure
 
 ```
 mkdocs-devops/
@@ -38,7 +38,7 @@ mkdocs-devops/
 
 ---
 
-## 🐳 Run with Docker
+## Run with Docker
 
 ```bash
 docker build -t mkdocs-devops .
@@ -49,7 +49,7 @@ Go to [http://localhost:8000](http://localhost:8000).
 
 ---
 
-## ☸️ Run with Kubernetes
+## ☸Run with Kubernetes
 
 ### First-time deployment
 
@@ -89,14 +89,8 @@ Go to [http://localhost:8000](http://localhost:8000).
 | Stopping the deployment gracefully | `kubectl scale deployment mkdocs-deployment --replicas=0` | To stop the app without deleting the deployment.                                                               |
 | Restarting after scaling to zero   | `kubectl scale deployment mkdocs-deployment --replicas=1` | When you've previously applied the YAML and just want to start it again. Port forwarding has to be done again. |
 
-## 📌 Notes
+## Notes
 
 - The `service.yaml` file is only required if you're exposing the deployment via LoadBalancer or NodePort.
 - This repo is a dev-focused demo; production use should involve ingress and TLS.
 
----
-
-## 👤 Author
-
-**Nico Alba**  
-[GitHub](https://github.com/nicoalba) • [LinkedIn](https://linkedin.com/in/nicoalba) • [dockerhub](https://hub.docker.com/r/nicoalba/)
