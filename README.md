@@ -15,7 +15,7 @@ This project demonstrates how to build, containerize, and deploy a static docume
 
 ---
 
-## 🚀 Features
+## Features
 
 - Static documentation site powered by Markdown  
 - Dockerized/containerized for isolated and reproducible builds  
